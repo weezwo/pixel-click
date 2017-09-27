@@ -1,15 +1,28 @@
-import React, { Component} from 'react'
+import React, {Component} from 'react'
 import {SketchField, Tools} from 'react-sketch';
 
 class Canvas extends Component {
+  constructor(params){
+    super(params);
+    this.state ={
+      lineColor: 'black',
+      lineWidth: 2,
+      tool: Tools.Pencil
+    }
+  }
+
   render() {
     return (
       <div className="canvas">
-        <SketchField width='600px'
+        <SketchField
+                ref="sketch"
+                width='600px'
                 height='400px'
-                tool={Tools.Pencil}
-                color='black'
-                lineWidth={3}/>
+                tool={this.state.tool}
+                color={this.state.lineColor}
+                lineWidth={this.state.lineWidth}
+                onChange={this.handleChange}
+              />
       </div>
     );
   }
