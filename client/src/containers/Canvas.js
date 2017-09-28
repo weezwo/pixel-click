@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {SketchField, Tools} from 'react-sketch';
+import SaveButton from '../components/SaveButton'
 
 class Canvas extends Component {
   constructor(params){
@@ -13,16 +14,20 @@ class Canvas extends Component {
 
   render() {
     return (
-      <div className="canvas">
-        <SketchField
-                ref="sketch"
-                width='600px'
-                height='400px'
-                tool={this.state.tool}
-                color={this.state.lineColor}
-                lineWidth={this.state.lineWidth}
-                onChange={this.handleChange}
-              />
+      <div>
+
+        <div className="canvas">
+          <SketchField
+                  ref="sketch"
+                  width='600px'
+                  height='400px'
+                  tool={this.state.tool}
+                  color={this.state.lineColor}
+                  lineWidth={this.state.lineWidth}
+                  onChange={this.handleChange}
+                />
+        </div>
+        <SaveButton/>
       </div>
     );
   }
