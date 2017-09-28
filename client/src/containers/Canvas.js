@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {SketchField, Tools} from 'react-sketch';
 import SaveButton from '../components/SaveButton'
+import ToolSelect from '../components/ToolSelect'
+import MenuOption from '../components/MenuOption'
 
 class Canvas extends Component {
   constructor(params){
@@ -20,7 +22,7 @@ class Canvas extends Component {
   }
 
   onToolChange = (e) => {
-
+    this.setState({tool: e.target.value})
   }
 
   render() {
@@ -37,6 +39,10 @@ class Canvas extends Component {
                   onChange={this.handleChange}
                 />
         </div>
+        <ToolSelect onToolChange={this.onToolChange}>
+          <MenuOption tool={Tools.Pencil} text="Pencil"/>
+          <MenuOption tool={Tools.Select} text="Select"/>
+        </ToolSelect>
         <SaveButton onSave={this.onSave}/>
       </div>
     );
