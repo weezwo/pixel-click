@@ -50,7 +50,14 @@ class Canvas extends Component {
 
         <MenuSelect onChange={this.onColorChange}>
           <MenuOption value='black' text="Black"/>
+          <MenuOption value='red' text="Red"/>
+          <MenuOption value='orange' text="Orange"/>
+          <MenuOption value='yellow' text="Yellow"/>
+          <MenuOption value='green' text="Green"/>
           <MenuOption value='blue' text="Blue"/>
+          <MenuOption value='purple' text="Purple"/>
+          <MenuOption value='violet' text="Pink"/>
+          <MenuOption value='brown' text="Brown"/>
         </MenuSelect>
         <SaveButton onSave={this.onSave}/>
       </div>
