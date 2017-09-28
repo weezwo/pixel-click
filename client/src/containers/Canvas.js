@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {SketchField, Tools} from 'react-sketch';
 import SaveButton from '../components/SaveButton'
-import ToolSelect from '../components/ToolSelect'
+import MenuSelect from '../components/MenuSelect'
 import MenuOption from '../components/MenuOption'
 
 class Canvas extends Component {
@@ -26,7 +26,7 @@ class Canvas extends Component {
   }
 
   onColorChange = (e) => {
-    this.setState({color: e.target.value})
+    this.setState({lineColor: e.target.value})
   }
 
   render() {
@@ -38,15 +38,20 @@ class Canvas extends Component {
                   width='600px'
                   height='400px'
                   tool={this.state.tool}
-                  color={this.state.lineColor}
+                  lineColor={this.state.lineColor}
                   lineWidth={this.state.lineWidth}
                   onChange={this.handleChange}
                 />
         </div>
-        <ToolSelect onChange={this.onToolChange}>
-          <MenuOption tool={Tools.Pencil} text="Pencil"/>
-          <MenuOption tool={Tools.Select} text="Select"/>
-        </ToolSelect>
+        <MenuSelect onChange={this.onToolChange}>
+          <MenuOption value={Tools.Pencil} text="Pencil"/>
+          <MenuOption value={Tools.Select} text="Select"/>
+        </MenuSelect>
+
+        <MenuSelect onChange={this.onColorChange}>
+          <MenuOption value='black' text="Black"/>
+          <MenuOption value='blue' text="Blue"/>
+        </MenuSelect>
         <SaveButton onSave={this.onSave}/>
       </div>
     );
