@@ -70,6 +70,11 @@ class Canvas extends Component {
         <MenuSelect onChange={this.onWidthChange} value='2'>
           <MenuOption value='1' text='1'/>
           <MenuOption value='2' text='2'/>
+          <MenuOption value='3' text='3'/>
+          <MenuOption value='4' text='4'/>
+          <MenuOption value='5' text='5'/>
+          <MenuOption value='10' text='10'/>
+          <MenuOption value='100' text='100'/>
         </MenuSelect>
         <SaveButton onSave={this.onSave}/>
       </div>
