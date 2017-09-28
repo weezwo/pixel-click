@@ -10,12 +10,17 @@ class Canvas extends Component {
       lineWidth: 2,
       tool: Tools.Pencil
     }
+
+    this.onSave = this.onSave.bind(this)
+  }
+
+  onSave = () => {
+    console.log(this.refs.sketch.toJSON())
   }
 
   render() {
     return (
       <div>
-
         <div className="canvas">
           <SketchField
                   ref="sketch"
@@ -27,7 +32,7 @@ class Canvas extends Component {
                   onChange={this.handleChange}
                 />
         </div>
-        <SaveButton/>
+        <SaveButton onSave={this.onSave}/>
       </div>
     );
   }
