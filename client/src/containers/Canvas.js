@@ -50,6 +50,7 @@ class Canvas extends Component {
         <MenuSelect onChange={this.onToolChange} value={Tools.Pencil}>
           <MenuOption value={Tools.Select} text="Select"/>
           <MenuOption value={Tools.Pencil} text="Pencil"/>
+          <MenuOption value={Tools.Line} text="Line"/>
           <MenuOption value={Tools.Rectangle} text="Rectangle"/>
           <MenuOption value={Tools.Circle} text="Circle"/>
         </MenuSelect>
