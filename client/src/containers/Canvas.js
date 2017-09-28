@@ -29,6 +29,10 @@ class Canvas extends Component {
     this.setState({lineColor: e.target.value})
   }
 
+  onWidthChange = (e) => {
+    this.setState({lineWidth: +e.target.value})
+  }
+
   render() {
     return (
       <div>
@@ -61,6 +65,11 @@ class Canvas extends Component {
           <MenuOption value='violet' text="Pink"/>
           <MenuOption value='brown' text="Brown"/>
           <MenuOption value='white' text="White"/>
+        </MenuSelect>
+
+        <MenuSelect onChange={this.onWidthChange} value='2'>
+          <MenuOption value='1' text='1'/>
+          <MenuOption value='2' text='2'/>
         </MenuSelect>
         <SaveButton onSave={this.onSave}/>
       </div>
