@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 
-class ToolSelect extends Component {
+class MenuSelect extends Component {
   render(){
     return(
-      <select onChange={this.props.onToolChange}>
+      <select onChange={this.props.onChange}>
         {this.props.children}
       </select>
     )
   }
 }
 
-export default ToolSelect;
+export default MenuSelect;

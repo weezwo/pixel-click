@@ -43,7 +43,7 @@ class Canvas extends Component {
                   onChange={this.handleChange}
                 />
         </div>
-        <ToolSelect onToolChange={this.onToolChange}>
+        <ToolSelect onChange={this.onToolChange}>
           <MenuOption tool={Tools.Pencil} text="Pencil"/>
           <MenuOption tool={Tools.Select} text="Select"/>
         </ToolSelect>
