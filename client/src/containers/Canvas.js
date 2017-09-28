@@ -12,10 +12,15 @@ class Canvas extends Component {
     }
 
     this.onSave = this.onSave.bind(this)
+    this.onToolChange = this.onToolChange.bind(this)
   }
 
   onSave = () => {
     console.log(this.refs.sketch.toJSON())
+  }
+
+  onToolChange = (e) => {
+
   }
 
   render() {
