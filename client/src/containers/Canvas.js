@@ -43,12 +43,12 @@ class Canvas extends Component {
                   onChange={this.handleChange}
                 />
         </div>
-        <MenuSelect onChange={this.onToolChange}>
-          <MenuOption value={Tools.Pencil} text="Pencil"/>
+        <MenuSelect onChange={this.onToolChange} value={Tools.Pencil}>
           <MenuOption value={Tools.Select} text="Select"/>
+          <MenuOption value={Tools.Pencil} text="Pencil"/>
         </MenuSelect>
 
-        <MenuSelect onChange={this.onColorChange}>
+        <MenuSelect onChange={this.onColorChange} value="black">
           <MenuOption value='black' text="Black"/>
           <MenuOption value='red' text="Red"/>
           <MenuOption value='orange' text="Orange"/>
