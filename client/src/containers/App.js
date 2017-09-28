@@ -10,9 +10,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Router>
-          <Route exact path='/' component={Canvas}/>
-        </Router>
+      <Router>
+        <Route exact path='/' component={Canvas}/>
+      </Router>
       </div>
     );
   }
