@@ -25,6 +25,10 @@ class Canvas extends Component {
     this.setState({tool: e.target.value})
   }
 
+  onColorChange = (e) => {
+    this.setState({color: e.target.value})
+  }
+
   render() {
     return (
       <div>
