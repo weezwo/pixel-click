@@ -3,7 +3,8 @@ import React, {Component} from 'react';
 class ToolSelect extends Component {
   render(){
     return(
-      <select>
+      <select onChange={this.props.onToolChange}>
+        {this.props.children}
       </select>
     )
   }
