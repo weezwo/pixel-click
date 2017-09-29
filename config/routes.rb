@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :sketches, only: [:index, :show, :create]
+  get 'api/sketches' => 'sketches#index'
+  get 'api/sketches/:id' => 'sketches#show'
+  post 'api/sketches' => 'sketches#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
