@@ -1,4 +1,4 @@
-class SketchController < ApplicationController
+class SketchesController < ApplicationController
   def index
     @sketches = Sketch.all
     render json: @sketches
