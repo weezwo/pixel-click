@@ -2,12 +2,20 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/sketchActions'
-
+import SketchCard from '../components/SketchCard'
 
 class SketchesPage extends Component {
+
+  componentDidMount(){
+    this.props.actions.fetchSketches()
+  }
   render(){
     return(
-      <div>HEY</div>
+      <div>{
+        this.props.sketches.map((sketch, key) =>{ return(
+          <SketchCard sketch={sketch} key={sketch.id}/>
+        )})}
+      </div>
     )
   }
 }
