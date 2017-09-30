@@ -1,6 +1,6 @@
 class SketchesController < ApplicationController
   def index
-    @sketches = Sketch.all
+    @sketches = Sketch.most_recent(20)
     render json: @sketches
   end
 
