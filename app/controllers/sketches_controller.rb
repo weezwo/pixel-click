@@ -10,12 +10,9 @@ class SketchesController < ApplicationController
   end
 
   def create
-    @sketch = Sketch.create(sketch_params)
+    @sketch = Sketch.new
+    @sketch.data = params[:data]
+    @sketch.save
     render json: @sketch, status: 201
-  end
-
-  private
-  def sketch_params
-    params.permit(data: [])
   end
 end
