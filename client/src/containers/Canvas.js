@@ -18,7 +18,14 @@ class Canvas extends Component {
   }
 
   onSave = () => {
-    console.log(this.refs.sketch.toJSON())
+    var data = JSON.stringify({data: this.refs.sketch.toJSON()})
+    console.log(data)
+    fetch('/api/sketches', {
+      method: 'post',
+      headers: {'content-type': 'application/json'},
+      body: data
+    }).then(resp => resp.json()
+  ).then(json=> console.log(json))
   }
 
   onToolChange = (e) => {
