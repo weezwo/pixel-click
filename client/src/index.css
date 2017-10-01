@@ -8,12 +8,17 @@ body {
   background-attachment: fixed;
 }
 
+.sketch-cards-container {
+  width: 80%;
+  margin: auto;
+}
+
 .sketch-card-container {
   width: 400px;
-  background: #fafafa;
+  background: #f8f8f8;
   box-shadow: 2px 2px 5px #888888;
   border-bottom: 1px solid #aaa;
-  margin: 10px 0;
+  margin: 4px auto;
   padding: 5px;
   display: inline-flex;
 }
@@ -24,4 +29,10 @@ body {
   width: 100px;
   color: #363636;
   font-family: monospace;
+}
+
+.canvas {
+  background-color: white;
+  width: 600px;
+  height: 400px;
 }
