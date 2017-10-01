@@ -7,6 +7,7 @@ import {
 import '../App.css';
 import Canvas from './Canvas'
 import SketchesPage from './SketchesPage'
+import SketchesShow from './SketchesShow'
 
 class App extends Component {
   render() {
@@ -15,7 +16,8 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path='/' component={Canvas}/>
-          <Route path='/sketches' component={SketchesPage}/>
+          <Route exact path='/sketches' component={SketchesPage}/>
+          <Route exact path='/sketches/:sketchId' component={SketchesShow}/>
         </Switch>
       </Router>
       </div>
