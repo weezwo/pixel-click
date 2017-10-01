@@ -11,7 +11,7 @@ class SketchesPage extends Component {
   }
   render(){
     return(
-      <div>{
+      <div className="sketch-cards-container">{
         this.props.sketches.map((sketch, key) =>{ return(
           <SketchCard sketch={sketch} key={sketch.id}/>
         )})}
