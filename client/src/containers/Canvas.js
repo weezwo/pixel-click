@@ -51,7 +51,6 @@ class Canvas extends Component {
                   tool={this.state.tool}
                   lineColor={this.state.lineColor}
                   lineWidth={this.state.lineWidth}
-                  onChange={this.handleChange}
                 />
         </div>
         <MenuSelect onChange={this.onToolChange} value={Tools.Pencil}>
