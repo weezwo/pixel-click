@@ -14,7 +14,10 @@ class App extends Component {
   render() {
     return (
       <div>
-      <NavBar/>
+        <header>
+          <h1>PixelClick</h1>
+          <NavBar/>
+        </header>
       <Router>
         <Switch>
           <Route exact path='/' component={Canvas}/>
