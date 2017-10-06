@@ -53,7 +53,8 @@ class Canvas extends Component {
                   lineWidth={this.state.lineWidth}
                 />
         </div>
-        <MenuSelect onChange={this.onToolChange} value={Tools.Pencil}>
+        <div className="menus">
+        <MenuSelect onChange={this.onToolChange} value={Tools.Pencil} menuName="Tool">
           <MenuOption value={Tools.Select} text="Select"/>
           <MenuOption value={Tools.Pencil} text="Pencil"/>
           <MenuOption value={Tools.Line} text="Line"/>
@@ -61,7 +62,7 @@ class Canvas extends Component {
           <MenuOption value={Tools.Circle} text="Circle"/>
         </MenuSelect>
 
-        <MenuSelect onChange={this.onColorChange} value="black">
+        <MenuSelect onChange={this.onColorChange} value="black" menuName="Color">
           <MenuOption value='black' text="Black"/>
           <MenuOption value='red' text="Red"/>
           <MenuOption value='orange' text="Orange"/>
@@ -74,7 +75,7 @@ class Canvas extends Component {
           <MenuOption value='white' text="White"/>
         </MenuSelect>
 
-        <MenuSelect onChange={this.onWidthChange} value='2'>
+        <MenuSelect onChange={this.onWidthChange} value='2' menuName="Size">
           <MenuOption value='1' text='1'/>
           <MenuOption value='2' text='2'/>
           <MenuOption value='3' text='3'/>
@@ -84,6 +85,7 @@ class Canvas extends Component {
           <MenuOption value='100' text='100'/>
         </MenuSelect>
         <SaveButton onSave={this.onSave}/>
+        </div>
       </div>
     );
   }
