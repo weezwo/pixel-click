@@ -8,10 +8,11 @@ class SketchesShow extends Component {
 
   componentDidMount(){
     this.props.actions.fetchSketch(this.props.sketchId)
-    console.log(this.props.sketch)
   }
+
   render(){
     const sketch = this.props.sketch
+    console.log(sketch)
     return(
       <div>
       <SketchField
@@ -28,12 +29,10 @@ class SketchesShow extends Component {
 }
 
 function mapStateToProps(state, ownProps) {
-  const sketch = actions.fetchSketch(ownProps.match.params.sketchId)
-  if (sketch) {
-    return {sketch}
-  } else {
-    return {sketch: {}}
-  }
+  return {
+    sketchId: ownProps.match.params.sketchId,
+    sketch: state.sketches.sketches
+    }
 }
 
 function mapDispatchToProps(dispatch) {
