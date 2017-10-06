@@ -19,7 +19,7 @@ export default class SketchCard extends Component {
           />
         </td>
         <td className="sketch-info">
-          <h1>{sketch.id}</h1>
+          <a href={"/sketches/" + sketch.id}><h1>{sketch.id}</h1></a>
           <h5>{sketch.created_at}</h5>
         </td>
         </tr>
