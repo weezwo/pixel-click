@@ -15,8 +15,7 @@ body {
 
 .sketch-card-container {
   width: 400px;
-  background: #f8f8f8;
-  box-shadow: 2px 2px 5px #888888;
+  background: white;
   border-bottom: 1px solid #aaa;
   margin: 4px auto;
   padding: 5px;
@@ -35,8 +34,20 @@ body {
   background-color: white;
   width: 600px;
   height: 400px;
+  margin: auto;
 }
 
-.nav-item {
-  display: inline-block;
+select {
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
