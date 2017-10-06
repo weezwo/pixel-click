@@ -37,8 +37,33 @@ body {
   margin: auto;
 }
 
-select {
+.menus {
+  width: 600px;
+  margin: auto;
   text-align: center;
+}
+
+.menu {
+  display: inline-block;
+  margin: 0 1%;
+}
+
+select {
+  font-size: 125%;
+  width: 100%;
+  background-color: white;
+}
+
+h3 {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+button {
+  font-size: 125%;
+  background-color: white;
+  border-radius: 5px;
+  border-style: solid;
 }
 
 header {
