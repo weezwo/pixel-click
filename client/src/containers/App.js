@@ -8,11 +8,13 @@ import '../App.css';
 import Canvas from './Canvas'
 import SketchesPage from './SketchesPage'
 import SketchesShow from './SketchesShow'
+import NavBar from '../components/NavBar'
 
 class App extends Component {
   render() {
     return (
       <div>
+      <NavBar/>
       <Router>
         <Switch>
           <Route exact path='/' component={Canvas}/>
