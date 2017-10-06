@@ -3,9 +3,18 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(#f6f6f6, #f1f1f1);
+  background: linear-gradient(#f6f6f6, #ddd);
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bbb;
 }
 
 .sketch-cards-container {
@@ -75,4 +84,10 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  font-size: 125%;
+  margin: 0 10px;
 }
