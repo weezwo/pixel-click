@@ -14,7 +14,7 @@ class SketchesShow extends Component {
     const sketch = this.props.sketch
     console.log(sketch)
     return(
-      <div>
+      <div className="canvas">
       <SketchField
         ref="sketch"
         width='600px'
