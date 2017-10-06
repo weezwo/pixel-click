@@ -26,6 +26,7 @@ class Canvas extends Component {
       body: data
     }).then(resp => resp.json()
   ).then(json=> console.log(json))
+  this.props.history.push('/sketches')
   }
 
   onToolChange = (e) => {
