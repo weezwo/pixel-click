@@ -22,6 +22,10 @@
   color: #363636;
 }
 
+.pagination {
+  text-align: center;
+}
+
 .full-sketch-info {
   background: white;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
