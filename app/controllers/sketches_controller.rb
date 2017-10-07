@@ -1,6 +1,6 @@
 class SketchesController < ApplicationController
   def index
-    @sketches = Sketch.most_recent(20)
+    @sketches = Sketch.all.order('id DESC').paginate(:page => params[:page], :per_page => 5)
     render json: @sketches
   end
 
