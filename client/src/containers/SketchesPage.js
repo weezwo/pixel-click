@@ -10,8 +10,6 @@ class SketchesPage extends Component {
     super(props);
     this.state={
       page: 1,
-      next: 'inline',
-      prev: 'none'
     }
   }
 
