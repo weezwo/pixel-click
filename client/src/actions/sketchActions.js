@@ -1,9 +1,9 @@
 import fetch from 'isomorphic-fetch';
 
-export function fetchSketches(){
+export function fetchSketches(page){
   return function(dispatch){
     dispatch({type: 'LOADING_SKETCHES'})
-    return fetch('/api/sketches', {
+    return fetch(`/api/sketches/?page=${page}`, {
       accept: 'application/json'
     }).then(res => res.json()
   ).then(responseJSON =>{
