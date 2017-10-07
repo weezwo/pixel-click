@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/sketchActions'
-import {SketchField, Tools} from 'react-sketch';
+import SketchFull from '../components/SketchFull'
 
 class SketchesShow extends Component {
 
@@ -14,17 +14,9 @@ class SketchesShow extends Component {
     const sketch = this.props.sketch
     console.log(sketch)
     return(
-      <div className="canvas">
+      <div>
         {sketch.map((sketch,key) => {return(
-          <SketchField
-            ref="sketch"
-            width='600px'
-            height='400px'
-            defaultData={sketch.data}
-            defaultDataType="json"
-            tool={Tools.Pan}
-            key={key}
-          />
+          <SketchFull sketch={sketch} key={key}/>
         )})}
       </div>
     )
