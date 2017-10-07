@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {SketchField, Tools} from 'react-sketch';
-import SaveButton from '../components/SaveButton'
+import Button from '../components/Button'
 import MenuSelect from '../components/MenuSelect'
 import MenuOption from '../components/MenuOption'
 
@@ -12,9 +12,6 @@ class Canvas extends Component {
       lineWidth: 2,
       tool: Tools.Pencil
     }
-
-    this.onSave = this.onSave.bind(this)
-    this.onToolChange = this.onToolChange.bind(this)
   }
 
   onSave = () => {
@@ -25,6 +22,10 @@ class Canvas extends Component {
       body: data
     })
   this.props.history.push('/sketches')
+  }
+
+  onReset = () => {
+    window.location.reload(false)
   }
 
   onToolChange = (e) => {
@@ -83,7 +84,8 @@ class Canvas extends Component {
           <MenuOption value='10' text='10'/>
           <MenuOption value='100' text='100'/>
         </MenuSelect>
-        <SaveButton onSave={this.onSave}/>
+        <Button onClick={this.onSave} text="Save"/>
+        <Button onClick={this.onReset} text="Reset"/>
         </div>
       </div>
     );
