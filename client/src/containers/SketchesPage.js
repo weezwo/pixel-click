@@ -14,7 +14,6 @@ class SketchesPage extends Component {
   }
 
   nextPage = () => {
-    console.log(this.props.sketches.some((sketch)=>sketch.id === 1))
     if(!this.props.sketches.some((sketch)=>sketch.id === 1)){
       this.setState({
         page: this.state.page + 1
