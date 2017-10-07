@@ -1,3 +1,7 @@
+*:focus {
+  outline: none;
+}
+
 .sketch-cards-container {
   width: 80%;
   margin: auto;
@@ -16,6 +20,16 @@
   height: 100px;
   width: 100px;
   color: #363636;
+}
+
+.full-sketch-info {
+  background: white;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  width: 600px;
+  margin: 30px auto;
+  line-height: 140%;
+  padding: 10px 10px;
+  text-align: right;
 }
 
 .canvas {
@@ -52,7 +66,6 @@ button {
   background-color: white;
   border-radius: 5px;
   border-style: solid;
-  outline: none;
 }
 
 header {
