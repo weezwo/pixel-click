@@ -6,8 +6,35 @@ import SketchCard from '../components/SketchCard'
 
 class SketchesPage extends Component {
 
+  constructor(props){
+    super(props);
+    this.state={
+      page: 1,
+      next: 'inline',
+      prev: 'none'
+    }
+  }
+
+  nextPage = () => {
+    this.setState({
+      page: this.state.page + 1
+    })
+  }
+
+  prevPage = () => {
+    if (this.state.page > 1) {
+      this.setState({
+        page: this.state.page - 1
+      })
+    }
+  }
+
+  componentWillUpdate(nextProps, nextState){
+    if(this.state.page !== nextState.page){this.props.actions.fetchSketches(nextState.page)}
+  }
+
   componentDidMount(){
-    this.props.actions.fetchSketches()
+    this.props.actions.fetchSketches(this.state.page)
   }
   render(){
     return(
@@ -15,6 +42,10 @@ class SketchesPage extends Component {
         this.props.sketches.map((sketch, key) =>{ return(
           <SketchCard sketch={sketch} key={sketch.id}/>
         )})}
+        <div className="pagination">
+          <button onClick={this.prevPage}>Prev</button>
+          <button onClick={this.nextPage} >Next</button>
+        </div>
       </div>
     )
   }
