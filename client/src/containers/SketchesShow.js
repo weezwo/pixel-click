@@ -15,14 +15,17 @@ class SketchesShow extends Component {
     console.log(sketch)
     return(
       <div className="canvas">
-      <SketchField
-        ref="sketch"
-        width='600px'
-        height='400px'
-        defaultData={sketch.data}
-        defaultDataType="json"
-        tool={Tools.Pan}
-      />
+        {sketch.map((sketch,key) => {return(
+          <SketchField
+            ref="sketch"
+            width='600px'
+            height='400px'
+            defaultData={sketch.data}
+            defaultDataType="json"
+            tool={Tools.Pan}
+            key={key}
+          />
+        )})}
       </div>
     )
   }
