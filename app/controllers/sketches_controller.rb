@@ -5,7 +5,7 @@ class SketchesController < ApplicationController
   end
 
   def show
-    @sketch = Sketch.find(params[:id])
+    @sketch = [Sketch.find(params[:id])]
     render json: @sketch
   end
 
