@@ -27,4 +27,4 @@ Contributions are welcome via pull requests and issues.
 
 ## License
 
-ChoreCorps is released under the MIT license.
+PixelClick is released under the MIT license.
