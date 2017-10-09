@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/sketchActions'
 import SketchCard from '../components/SketchCard'
-import Button from '../component/Button'
+import Button from '../components/Button'
 
 class SketchesPage extends Component {
 
