@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/sketchActions'
 import SketchCard from '../components/SketchCard'
+import Button from '../component/Button'
 
 class SketchesPage extends Component {
 
@@ -43,8 +44,8 @@ class SketchesPage extends Component {
           <SketchCard sketch={sketch} key={sketch.id}/>
         )})}
         <div className="pagination">
-          <button onClick={this.prevPage} text='Prev'/>
-          <button onClick={this.nextPage} text='Next'/>
+          <Button onClick={this.prevPage} text='Prev'/>
+          <Button onClick={this.nextPage} text='Next'/>
         </div>
       </div>
     )
