@@ -43,8 +43,8 @@ class SketchesPage extends Component {
           <SketchCard sketch={sketch} key={sketch.id}/>
         )})}
         <div className="pagination">
-          <button onClick={this.prevPage}>Prev</button>
-          <button onClick={this.nextPage} >Next</button>
+          <button onClick={this.prevPage} text='Prev'/>
+          <button onClick={this.nextPage} text='Next'/>
         </div>
       </div>
     )
