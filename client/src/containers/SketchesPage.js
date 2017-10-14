@@ -2,8 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/sketchActions'
-import SketchCard from '../components/SketchCard'
-import Button from '../components/Button'
+import DisplaySketches from '../components/DisplaySketches'
 
 class SketchesPage extends Component {
 
@@ -38,15 +37,15 @@ class SketchesPage extends Component {
     this.props.actions.fetchSketches(this.state.page)
   }
   render(){
+      const sketchesExist = this.props.sketches.length > 0
     return(
-      <div className="sketch-cards-container">{
-        this.props.sketches.map((sketch, key) =>{ return(
-          <SketchCard sketch={sketch} key={sketch.id}/>
-        )})}
-        <div className="pagination">
-          <Button onClick={this.prevPage} text='Prev'/>
-          <Button onClick={this.nextPage} text='Next'/>
-        </div>
+      <div>
+        {sketchesExist ? (
+          <DisplaySketches sketches={this.props.sketches}/>
+        ) : (
+          <p className='no-sketch'>No sketches yet! Why not <a href=''>draw</a> one?</p>
+        )
+        }
       </div>
     )
   }
