@@ -43,7 +43,7 @@ class SketchesPage extends Component {
         {sketchesExist ? (
           <DisplaySketches sketches={this.props.sketches}/>
         ) : (
-          <p className='no-sketch'>No sketches yet! Why not <a href=''>draw</a> one?</p>
+          <p className='no-sketch'>No sketches yet! Why not <a href='/'>draw</a> one?</p>
         )
         }
       </div>
