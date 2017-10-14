@@ -1,0 +1,19 @@
+current directory: /home/luisa/dev/pixel-click/bundle/gems/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+/home/luisa/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20171013-3588-16ob655.rb extconf.rb
+creating Makefile
+
+current directory: /home/luisa/dev/pixel-click/bundle/gems/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/luisa/dev/pixel-click/bundle/gems/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR="
+compiling threads.c
+compiling locker.c
+compiling byebug.c
+compiling breakpoint.c
+compiling context.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/luisa/dev/pixel-click/bundle/gems/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -m 0755 byebug.so ./.gem.20171013-3588-4wjog/byebug

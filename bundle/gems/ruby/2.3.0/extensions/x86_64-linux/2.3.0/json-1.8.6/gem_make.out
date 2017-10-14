@@ -1,0 +1,13 @@
+current directory: /home/luisa/dev/pixel-click/bundle/gems/ruby/2.3.0/gems/json-1.8.6/ext/json
+/home/luisa/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20171013-3588-i1xtn4.rb extconf.rb
+creating Makefile
+
+current directory: /home/luisa/dev/pixel-click/bundle/gems/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/luisa/dev/pixel-click/bundle/gems/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/luisa/dev/pixel-click/bundle/gems/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install
