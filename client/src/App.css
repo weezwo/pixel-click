@@ -2,6 +2,10 @@
   outline: none;
 }
 
+.no-sketch {
+  text-align: center;
+}
+
 .sketch-cards-container {
   width: 80%;
   margin: auto;
