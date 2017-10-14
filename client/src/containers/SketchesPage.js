@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/sketchActions'
 import DisplaySketches from '../components/DisplaySketches'
+import Button from '../components/Button'
 
 class SketchesPage extends Component {
 
@@ -41,7 +42,13 @@ class SketchesPage extends Component {
     return(
       <div>
         {sketchesExist ? (
-          <DisplaySketches sketches={this.props.sketches}/>
+          <div>
+            <DisplaySketches sketches={this.props.sketches}/>
+            <div className="pagination">
+              <Button onClick={this.prevPage} text='Prev'/>
+              <Button onClick={this.nextPage} text='Next'/>
+            </div>
+          </div>
         ) : (
           <p className='no-sketch'>No sketches yet! Why not <a href='/'>draw</a> one?</p>
         )
