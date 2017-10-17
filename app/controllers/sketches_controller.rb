@@ -15,4 +15,11 @@ class SketchesController < ApplicationController
     @sketch.save
     render json: @sketch, status: 201
   end
+
+  def like
+    @sketch = Sketch.find(params[:id])
+    @sketch.likes += 1
+    @sketch.save
+    render json: @sketch
+  end
 end
