@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'api/sketches' => 'sketches#index'
   get 'api/sketches/:id' => 'sketches#show'
   post 'api/sketches' => 'sketches#create'
+  patch 'api/sketches/:id' => 'sketches#like'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
