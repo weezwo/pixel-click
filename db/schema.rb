@@ -11,12 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170929170909) do
+ActiveRecord::Schema.define(version: 20171017203101) do
 
   create_table "sketches", force: :cascade do |t|
     t.string   "data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "title"
+    t.integer  "likes",      default: 0
   end
 
 end
