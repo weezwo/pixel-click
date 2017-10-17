@@ -6,7 +6,7 @@ export default class DisplaySketches extends Component {
     const sketches = this.props.sketches
     return(
       <div className="sketch-cards-container">{
-        this.props.sketches.map((sketch, key) =>{ return(
+        sketches.map((sketch, key) =>{ return(
           <SketchCard sketch={sketch} key={sketch.id}/>
         )})}
       </div>
