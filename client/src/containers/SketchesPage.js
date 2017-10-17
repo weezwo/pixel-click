@@ -30,6 +30,14 @@ class SketchesPage extends Component {
     }
   }
 
+  onLike = (sketchId) => {
+    fetch(`/api/sketches/${sketchId}`,{
+      method: 'PATCH',
+      headers: {'content-type': 'application/json'},
+    }).then(res => res.json())
+    this.props.actions.fetchSketches(this.state.page)
+  }
+
   componentWillUpdate(nextProps, nextState){
     if(this.state.page !== nextState.page){this.props.actions.fetchSketches(nextState.page)}
   }
@@ -43,7 +51,7 @@ class SketchesPage extends Component {
       <div>
         {sketchesExist ? (
           <div>
-            <DisplaySketches sketches={this.props.sketches}/>
+            <DisplaySketches sketches={this.props.sketches} onLike={this.onLike}/>
             <div className="pagination">
               <Button onClick={this.prevPage} text='Prev'/>
               <Button onClick={this.nextPage} text='Next'/>
