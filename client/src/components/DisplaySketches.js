@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import SketchCard from '../components/SketchCard'
+import SketchCard from '../containers/SketchCard'
 
 export default class DisplaySketches extends Component {
   render(){

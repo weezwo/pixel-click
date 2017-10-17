@@ -13,19 +13,19 @@ import NavBar from '../components/NavBar'
 class App extends Component {
   render() {
     return (
-      <div>
-        <header>
-          <h1>PixelClick</h1>
-          <NavBar/>
-        </header>
       <Router>
-        <Switch>
-          <Route exact path='/' component={Canvas}/>
-          <Route exact path='/sketches' component={SketchesPage}/>
-          <Route exact path='/sketches/:sketchId' component={SketchesShow}/>
-        </Switch>
+        <div>
+          <header>
+            <h1>PixelClick</h1>
+            <NavBar/>
+          </header>
+          <Switch>
+            <Route exact path='/' component={Canvas}/>
+            <Route exact path='/sketches' component={SketchesPage}/>
+            <Route exact path='/sketches/:sketchId' component={SketchesShow}/>
+          </Switch>
+        </div>
       </Router>
-      </div>
     );
   }
 }
