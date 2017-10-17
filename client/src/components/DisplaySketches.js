@@ -7,7 +7,7 @@ export default class DisplaySketches extends Component {
     return(
       <div className="sketch-cards-container">{
         sketches.map((sketch, key) =>{ return(
-          <SketchCard sketch={sketch} key={sketch.id}/>
+          <SketchCard sketch={sketch} key={sketch.id} onLike={this.props.onLike}/>
         )})}
       </div>
     )
