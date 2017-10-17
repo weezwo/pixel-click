@@ -35,7 +35,9 @@ class SketchesPage extends Component {
       method: 'PATCH',
       headers: {'content-type': 'application/json'},
     }).then(res => res.json())
-    this.props.actions.fetchSketches(this.state.page)
+    .then(responseJSON =>{
+      this.props.actions.fetchSketches(this.state.page)})
+
   }
 
   componentWillUpdate(nextProps, nextState){
